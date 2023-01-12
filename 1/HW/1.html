@@ -21,16 +21,17 @@
 -->
     <script>
       "use strict";
-      
 
-      let c = prompt(
+      const userInput = +prompt(
         "Введите температуру в градусах Цельсия, чтоб получить её в градусах по Фаренгейту: "
       );
 
-      let f = (9 / 5) * c + 32;
+      const answerInFahrenheit = (9 / 5) * userInput + 32;
 
-      alert("Цельсий: " + c + ", Фаренгейт: " + f.toFixed(2));
-
+      alert(
+        `Цельсий: ${userInput} \nФаренгейт: ${answerInFahrenheit.toFixed(2)}`
+      );
+      // Поправил переменные
     </script>
   </body>
 </html>

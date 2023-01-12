@@ -27,24 +27,21 @@
 -->
     <script>
       "use strict";
-      let user_num = prompt("Введи число: ");
-      // let user_num = 9537;
 
-      let hundreds, dozens, units;
+      let user_num = +prompt("Введи число: ");
 
-      hundreds = Math.trunc(user_num / 100 % 10);
-      dozens = Math.trunc(user_num % 100 / 10);
-      units = Math.trunc(user_num % 10);
+      const hundreds = Math.trunc((user_num / 100) % 10);
+      // Невнимательно посмотрел пример. Можно трактовать по разному: в 9,5 тыс ведь 95 сотен, верно?)
+      // Но не суть, исправил.
+      const dozens = Math.trunc((user_num % 100) / 10);
+      const units = Math.trunc(user_num % 10);
 
+      // Отображение тоже поправил
       alert(
-        "В числе " +
-          user_num +
-          " количество сотен: " +
-          hundreds +
-          ", десятков: " +
-          dozens +
-          ", единиц: " +
-          units
+        `В числе ${user_num}\n
+        количество сотен: ${hundreds},
+        десятков: ${dozens},
+        единиц: ${units}`
       );
     </script>
   </body>
